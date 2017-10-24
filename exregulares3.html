@@ -6,9 +6,27 @@
     <script type="text/javascript">
       function comprueba() {
         var valor = document.getElementById('tel').value;
-        //expresion regular. /^ y $/ para abrir y cerrar \d para el numero de digitos y 9 el numero de digitos
+        //expresion regular. /^ y $/ para abrir y cerrar
         //test es una funcion para la expresion que te comprueba si el valor cumple la expresion
-        var comprobacion = /^\d{9}$/.test(valor);
+        //\d para el numero de digitos y el numero de digitos los guiones o letras van tal cual escritos
+            //var comprobacion = /^\d{3}-\d{3}-\d{3}$/.test(valor);
+
+        //\s es para un espacio.
+            //var comprobacion = /^\d{3}\s\d{3}\s\d{3}$/.test(valor);
+
+        //para poner un rango de letras [A-Z].
+            //var comprobacion = /^\d{8}[A-Z]$/.test(valor);
+
+        //el mas es para una o mas incidencias, es decir, una o mas letras
+            //var comprobacion = /^([A-Z])+$/.test(valor);
+
+        //el * es para cero o mas incidencias, es decir, una o mas letras
+            //var comprobacion = /^([A-Z])*$/.test(valor);
+
+        //para que acepte mayusculas y minusculas
+            var comprobacion = /^([a-zA-Z])*$/.test(valor);
+
+
         //si comprobacion es true
         if (comprobacion) {
           alert('ENVIADO');
