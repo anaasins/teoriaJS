@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="contenedor">
+      <p id="seleccionado">Primer parrafo</p>
+      <p>Otro parrafo.</p>
+    </div>
+
+    <script type="text/javascript">
+    //crear una etiqueta
+      var parrafo = document.createElement("p");
+      //poner el contenido que saldra dentro de la etiqueta que acabas de crear
+      var contenido = document.createTextNode("Nuevo parrafo.");
+      //decir a que etiqueta pertenece el contenido
+      parrafo.appendChild(contenido);
+      //decirle donde queremos que vaya el elemento deltro del body.
+      document.body.appendChild(parrafo);
+    </script>
+    <p id="borrar">Segundo parrafo</p>
+    <p>Tercer parrafo</p>
+    <script type="text/javascript">
+    //recogemos el elemento que queremos borrar por su id y lo borramos.
+      var parrafoborrar= document.getElementById('borrar');
+      parrafoborrar.parentNode.removeChild(parrafoborrar);
+    </script>
+
+    <script type="text/javascript">
+      //insertar donde yo le diga, aunque el script no este en el sitio
+      //creamos la nueva etiqueta.
+      var nuevo= document.createElement("h1");
+      //creamos el texto que queremos poner dentro de la etiqueta
+      var texto= document.createTextNode("Parrafos.");
+      //le decimos que ese texto pertenece a esa etiqueta.
+      nuevo.appendChild(texto);
+
+      //cogemos el elemento de referencia
+      var seleccionado= document.getElementById("seleccionado");
+      var contenedor= document.getElementById("contenedor");
+      //le decimos donde va a ir el nuevo parrafo con las referencias.
+      contenedor.insertBefore(nuevo, seleccionado);
+      //si quisieramos cambiar el seleccionado por el nuevo:
+      contenedor.replaceChild(nuevo, seleccionado);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function comprueba(evento, opcion) {
+        var nums = '012345';
+        var letras = 'abcdeABCDE';
+        var numsyletras = nums + letras;
+
+        var aceptados;
+        switch (opcion) {
+          case 1:
+            aceptados = nums;
+            break;
+          case 2:
+            aceptados = letras;
+            break;
+          case 3:
+            aceptados = numsyletras;
+            break;
+        }
+        //te saca la letra que has pulsado.
+        var c = String.fromCharCode(evento.charCode);
+
+        //si es distinto a -1 te devolvera true. Si es igual te devolvera false
+        return aceptados.indexOf(c) != -1;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Introduce numero: <br><br>
+      <input type="text" name="numero" id="numero" onkeypress="return comprueba(event, 1);"><br><br>
+      Introduce letra: <br><br>
+      <input type="text" name="letra" id="letra" onkeypress="return comprueba(event, 2);"><br><br>
+      Introduce letra o numero: <br><br>
+      <input type="text" name="lon" id="lon" onkeypress="return comprueba(event, 3);"><br><br>
+    </form>
+  </body>
+</html>

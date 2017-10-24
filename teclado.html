@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaccion con teclado</title>
+    <script type="text/javascript">
+      window.onload = mifuncion;
+
+      function mifuncion() {
+        //mientras bajas la tecla
+        document.onkeydown = escribe;
+        //cuando tienes la tecla apretada
+        document.onkeypress = escribe;
+        //cuando levantas el dedo de la tecla.
+        document.onkeyup = escribe;
+      }
+      function escribe(evento) {
+        //saca de que evento viene la informacion
+        console.log(evento.type);
+        //numero que lleva asociado la tecla
+        console.log(evento.keyCode);
+        //numero que lleva asociado la letra del teclado.
+        console.log(evento.charCode);
+        //saca la letra que hemos apretado
+        console.log(String.fromCharCode(evento.charCode));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="contenedor">
+
+    </div>
+  </body>
+</html>

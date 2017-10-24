@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #contenedor{
+        border: 1px solid black;
+        width: 250px;
+        height: 150px;
+      }
+    </style>
+    <script type="text/javascript">
+      function muestra() {
+        //recoger lo que han escrito del text area.
+        var texto = document.getElementById('contenido').value;
+        document.getElementById('contenedor').innerHTML = "<strong style= 'color: green;'>" + texto + "<strong>";
+      }
+    </script>
+  </head>
+  <body>
+    <form action="formulario.html" method="post">
+      <textarea name="texto" rows="4" cols="30" id="contenido"></textarea>
+      <input type="submit" name="" value="MUESTRA" onclick="muestra(); return false;">
+    </form>
+    <p id="contenedor"></p>
+  </body>
+</html>

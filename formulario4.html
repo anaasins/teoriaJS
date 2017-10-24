@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function comprueba() {
+        //te convierte el select en un array de opciones y te saca el indice de la opcion seleccionada.
+        var indice = document.getElementById('opciones').selectedIndex;
+        //si el indice es 0, no te lo envia, si es otro si
+        if (indice==null || indice==0) {
+          alert("NO ENVIADO");
+          return false;
+        }else {
+          alert("ENVIADO");
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!--On submit hace que haga lo que quiero cuando se aprete el boton submit -->
+    <form onsubmit="comprueba();">
+      <select id="opciones" name="opciones">
+        <option value="">Selecciona</option>
+        <option value="1">Primer valor</option>
+        <option value="2">Segundo valor</option>
+        <option value="3">Tercer valor</option>
+      </select>
+      <input type="submit" name="" value="Enviar">
+    </form>
+  </body>
+</html>

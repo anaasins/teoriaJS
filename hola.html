@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hola mundo</title>
+  </head>
+  <body>
+    <h1>Hola mundo con html</h1>
+    <h6>Borja apesta</h6>
+    <noscript>
+      <!--Per si no llig el javascript -->
+      Este navegador no soporta JS
+    </noscript>
+    <script type="text/javascript">
+    //comentaario de linea.
+    //como el echo
+      alert("Hola desde dentro");
+      /*comentario
+      en
+      bloque*/
+
+      //variables:
+      /*var nombre;
+      var numero=5;
+      var numero=9.5;
+      var booleano=true;
+      var cadena="Ana";
+      var array=["primer valor", 2, false];
+      // o
+      var nombre;
+      nombre=3;
+      //o mas de una a la vez
+      var nombre, edad;
+
+      //operaciones
+      var num1=5.2;
+      var num2=3;
+      var resultado=num1+num2;
+      alert(resultado);
+      //o
+      alert(num1+num2);*/
+
+      //if
+      /*if (condicion) {
+        operacion;
+      }else if (condicion) {
+        operacion;
+      }else {
+        operacion;
+      }*/
+
+      //for
+      for (var i = 0; i < 5; i++) {
+        alert("for i: " +i);
+      }
+
+      //while
+      var i=0;
+      while (i<5) {
+        alert(" while i: " +i);
+        i++;
+      }
+
+      //do while
+      var i=0;
+      do {
+        alert(" do while i: " +i);
+        i++;
+      } while (i<5);
+
+      //switch
+      var i="a";
+      switch (i) {
+        case "a":
+            alert("letra a");
+          break;
+        case "b":
+          alert("letra b");
+          break;
+        default:
+          alert("otra");
+          break;
+      }
+
+      //pedir algo al usuario
+      var variable= prompt("Introduce un valor: ")
+
+      //para escribir en la consola
+      console.log("Hola consola");
+      //per a escriure en pantalla
+      document.write("Hola pantalla");
+
+      //arrays y como recorrerlos
+      var miArray = ["a", 1, true, "b", "c", "d"];
+
+      for (var i = 0; i < miArray.length ; i++) {
+        //para que se salte el elemento que quieres
+        if (miArray[i]=="b") {
+          continue;
+        }
+          alert(miArray[i]);
+      }
+
+      for (var i in miArray) {
+        document.write(miArray[i]);
+      }
+
+      //funciones importantes
+      var miCadena="Hola, ¿cómo estás?";
+
+      console.log(miCadena.length);
+
+      //var otraCadena=miCadena + " Bien!";
+      //miCadena+=" Bien!"
+      var otraCadena=miCadena.concat(" Bien!")
+      otraCadena = miCadena.toUpperCase();
+      console.log(miCadena.toLowerCase())
+      console.log(otraCadena);
+      //te dice en que posicion esta la letra q le pongas
+      console.log(miCadena.indexOf("o"));
+      //lo mismo empezando del final
+      console.log(miCadena.lastIndexOf("o"));
+      //saca un trozo de cadena q tu limitas.
+      console.log(miCadena.substring(1,4));
+      //separa la cadena y crea un array.
+      var otraVariable=miCadena.split("");
+      var miArray=["a", "b", "c", "d", "e"];
+
+      console.log(miArray.length);
+
+      var otroArray = miArray.concat(5, 6, "Hola", [3, 2, 1]);
+      console.log(otroArray);
+
+      //juntar los datos de un array en una sola cadena.
+      var junto = miArray.join(" ");
+      console.log(junto);
+      //anidar funciones
+      var junto = miArray.join("").length;
+      console.log(junto);
+
+      var miArray=[1, 2, 3, 4, 5];
+      //mete un dato al final del array
+      miArray.push("nuevo");
+      console.log(miArray);
+      //sacar el elemento que habias metido
+      var elemento = miArray.pop();
+      console.log("elemento: " + elemento);
+      console.log("miArray: " + miArray);
+      //quita un elemento del principio del array.
+      miArray.shift();
+      console.log(miArray);
+      //añade un elemento al principio del array.
+      miArray.unshift("nuevo");
+      console.log(miArray);
+      //poner al reves el array.
+      var cambiado=miArray.reverse();
+      console.log(cambiado);
+
+      var miVariable="Hola, que tal?";
+      //cambia la letra que quieras por la que le digas.
+      console.log(miVariable.replace("a", "A"));
+    </script>
+
+    <!--Per a posar el script extern -->
+    <script type="text/javascript" src="hola.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #contenedor{
+        width: 300px;
+        height: 300px;
+        background-color: green;
+        border: 4px solid black;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 300px;
+      }
+    </style>
+    <script type="text/javascript">
+    /*function modifica(evento) {
+    //el evento, type te devuelve el evento que se esta ejecutando, y deoende de esto hacemos una cosa.
+      switch (evento.type) {
+        case 'mouseover':
+           this.style.backgroundColor='red';
+          break;
+        case 'mouseout':
+          this.style.backgroundColor='green';
+          break;
+
+      }
+    }
+      function ejecuta() {
+      //definir eventos dentro de un elemento.
+        document.getElementById("contenedor").onmouseover=modifica;
+        document.getElementById('contenedor').onmouseout=modifica;
+      }*/
+    </script>
+    <script type="text/javascript">
+      function escribe(evento) {
+        var x= evento.clientX;
+        var y = evento.clientY;
+
+        document.getElementById('info').innerHTML="He hecho click en x: "+x+" y: "+y;
+
+      }
+      //pulses donde pulses se ejecuta.
+      document.onclick=escribe;
+    </script>
+  </head>
+  <body>
+    <!--<div id="contenedor">
+      CONTENIDO
+    </div>-->
+
+    <p id="info"></p>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function comprueba() {
+        var valor = document.getElementById('tel').value;
+        //expresion regular. /^ y $/ para abrir y cerrar \d para el numero de digitos y 9 el numero de digitos
+        //test es una funcion para la expresion que te comprueba si el valor cumple la expresion
+        var comprobacion = /^\d{9}$/.test(valor);
+        //si comprobacion es true
+        if (comprobacion) {
+          alert('ENVIADO');
+          return true;
+        }else {
+          alert('NO ENVIADO');
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return comprueba();">
+      Telefono: <input type="text" name="tel" id="tel">
+      <input type="submit" name="" value="Enviar">
+    </form>
+  </body>
+</html>

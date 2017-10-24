@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function aprieta() {
+        var elementos = document.getElementsByName('valor');
+        for (var i = 0; i < elementos.length; i++) {
+          //checked te dice si esta apretado o no, tambien sirve para los checkbox.
+          alert('Elemento: '+elementos[i].value+'. Seleccionado: ' +elementos[i].checked);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="radio" name="valor" value="si" id="si">SI <br>
+      <input type="radio" name="valor" value="no" id="no">NO <br>
+      <input type="radio" name="valor" value="nsnc" id="nsnc">NS/NC <br>
+      <input type="submit" name="" value="ENVIAR" onclick="aprieta(); return false;">
+    </form>
+  </body>
+</html>

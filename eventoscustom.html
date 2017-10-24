@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    //llamar a un evento en un momento
+      document.addEventListener("click", mifuncion);
+      function mifuncion() {
+        document.getElementById('contenedor').innerHTML="Has hecho click";
+      }
+
+      //crear nuevo evento
+      var nuevoEvento= new Event('imprime');
+      //escucharlo y darle una funcion
+      document.addEventListener('imprime', function(ev){
+        alert('hola');
+      });
+      //decir cuando queremos que se dispare el evento. Se disparara cuando llegue a esta linea
+      document.dispatchEvent(nuevoEvento);
+    </script>
+  </head>
+  <body>
+    <div id="contenedor">
+    </div>
+  </body>
+</html>
