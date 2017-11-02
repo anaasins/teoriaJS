@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //creamos un objeto json
+      var objetoJSON = {
+        p1: "a",
+        p2: 2,
+        p3: true
+      }
+
+      //guarda la variable en localstorage
+      localStorage.setItem("prop1", objetoJSON.p1);
+        //lo musmo que: localStorage.prop1 = objetoJSON.p1;
+      //sacamos por pantalla la variable
+      console.log("propiedad 1: " +localStorage.getItem("prop1"));
+
+      //eliminamos el valor
+      localStorage.removeItem("prop1");
+    </script>
+  </body>
+</html>

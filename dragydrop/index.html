@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #contenedor{
+        width: 300px;
+        height: 300px;
+        background-color: green;
+      }
+      img{
+        width: 250px;
+        height: auto;
+      }
+    </style>
+    <script type="text/javascript" src="arrastra.js"></script>
+  </head>
+  <body>
+    <div id="contenedor" ondragover="pasar(event)" ondrop="soltar(event)"></div>
+    <img  id="imagen" src="merda.jpg" draggable="true" ondragstart="arrastrar(event);">
+  </body>
+</html>
